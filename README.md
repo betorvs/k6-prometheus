@@ -19,8 +19,7 @@ spec:
   ports:
   - containerPort: 5656
     name: metrics
-  runner:
-    image: betorvs/k6-prometheus:v0.37.0
+  image: betorvs/k6-prometheus:v0.37.0
 ```
 
 Pod Monitor:
@@ -35,4 +34,5 @@ spec:
       app: k6
   podMetricsEndpoints:
   - port: metrics
+    interval: 15s
 ```
